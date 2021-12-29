@@ -1,10 +1,10 @@
 package vetsobrerodas.refs.Controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
 
-@RestController
-public class Controller {
+@Controller
+public class VetController {
 
 
     @GetMapping(value="/")
@@ -12,4 +12,6 @@ public class Controller {
     {
       return "index";
     }
+
+
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/css/Reference.css" th:href="@{/css/Reference.css}" rel="stylesheet" />
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/reference}" method="post"  class="Client_Info">
+        <div class="form-group">
+            <label for="clientName">Nome do cliente</label>
+            <input type="text" name="clientName" class="form-control my-input" id="clientName" >
+        </div>
+        <div class="form-group">
+            <label for="clientPhone">Telefone do cliente</label>
+            <input type="text" name="clientPhone" class="form-control my-input" id="clientPhone" >
+        </div>
+        <div class="form-group">
+            <label for="clientEmail">Email do cliente</label>
+            <input type="text" name="clientEmail" class="form-control my-input" id="clientEmail">
+        </div>
+        <div class="form-group">
+            <label for="clientPetName">Nome do pet do cliente</label>
+            <input type="text" name="clientPetName" class="form-control my-input" id="clientPetName" >
+        </div>
+        <label>Já é nosso cliente?</label>
+        <br>
+        <div class="form-group">
+            <input type="radio" name="isMember" value="True" id="radioTrue" class="form-control my-input" >
+            <label for="radioTrue">Sim</label>
+            <input type="radio" name="isMember" value="False"  id="radioFalse" class="form-control my-input">
+            <label for="radioFalse">Nao</label>
+
+        </div>
+        <br>
+        <button class="submit" type="submit">Submit</button> <button class="reset" type="reset">Reset</button>
+    </form>
+</body>
+</html>
