@@ -3,37 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <link href="../static/css/Reference.css" th:href="@{/css/Reference.css}" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap-5.0.0-alpha-2.min.css}" />
     <title>Title</title>
 </head>
 <body>
-    <form th:action="@{/reference}" method="post"  class="Client_Info">
-        <div class="form-group">
-            <label for="clientName">Nome do cliente</label>
-            <input type="text" name="clientName" class="form-control my-input" id="clientName" >
-        </div>
-        <div class="form-group">
-            <label for="clientPhone">Telefone do cliente</label>
-            <input type="text" name="clientPhone" class="form-control my-input" id="clientPhone" >
-        </div>
-        <div class="form-group">
-            <label for="clientEmail">Email do cliente</label>
-            <input type="text" name="clientEmail" class="form-control my-input" id="clientEmail">
-        </div>
-        <div class="form-group">
-            <label for="clientPetName">Nome do pet do cliente</label>
-            <input type="text" name="clientPetName" class="form-control my-input" id="clientPetName" >
-        </div>
-        <label>Já é nosso cliente?</label>
-        <br>
-        <div class="form-group">
-            <input type="radio" name="isMember" value="True" id="radioTrue" class="form-control my-input" >
-            <label for="radioTrue">Sim</label>
-            <input type="radio" name="isMember" value="False"  id="radioFalse" class="form-control my-input">
-            <label for="radioFalse">Nao</label>
+    <nav class="navbar-main">
+        <a class="navbar-brand" th:href="@{/}">
+            <img alt="" src="../static/Images/logo.PNG"  width="130" height="90" th:src="@{/Images/logo.PNG}"/>
+        </a>
+        <a class="navbar-link" href="https://www.vetsobrerodas.pt">
+            <img src="../static/Images/dog_head.PNG"  width="60" height="40" th:src="@{/Images/dog_head.PNG}"/>
+            <p>www.vetsobrerodas.pt</p>
+        </a>
+    </nav>
+    <div class="form-container">
+        <form th:action="@{/reference}" method="post"  class="Client_Info">
+            <div class="form-group">
+                <label class="label-inputs" for="clientName">Nome do cliente</label>
+                <input type="text" name="clientName" class="form-control my-input" id="clientName" >
+            </div>
+            <div class="form-group">
+                <label class="label-inputs" for="clientPhone">Telefone do cliente</label>
+                <input type="text" name="clientPhone" class="form-control my-input" id="clientPhone" >
+            </div>
+            <div class="form-group">
+                <label class="label-inputs" for="clientEmail">Email do cliente</label>
+                <input type="text" name="clientEmail" class="form-control my-input" id="clientEmail">
+            </div>
+            <div class="form-group">
+                <label class="label-inputs" for="clientPetName">Nome do pet do cliente</label>
+                <input type="text" name="clientPetName" class="form-control my-input" id="clientPetName" >
+            </div>
+            <div class="radio-div" >
+                <h3>Já é nosso cliente?</h3>
+                <input type="radio" name="isMember" value="True" id="radioTrue" >
+                <label for="radioTrue">Sim</label>
+                <input type="radio" name="isMember" value="False"  id="radioFalse">
+                <label for="radioFalse">Nao</label>
+            </div>
+            <button class="submit" type="submit">Submit</button> <button class="reset" type="reset">Reset</button>
 
-        </div>
-        <br>
-        <button class="submit" type="submit">Submit</button> <button class="reset" type="reset">Reset</button>
-    </form>
+        </form>
+    </div>
+
 </body>
 </html>

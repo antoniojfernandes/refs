@@ -1,15 +1,17 @@
 package vetsobrerodas.refs.Entities;
 
+
+import vetsobrerodas.refs.Utils.IdGenerator;
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name = "reference")
 public class Reference {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
-    private Long id;
+    private String id;
     @Column(name = "clientName", nullable = false)
     private String clientName;
     @Column(name = "clientPhone", nullable = false)
@@ -28,13 +30,13 @@ public class Reference {
         this.clientPetName = clientPetName;
         this.isMember = isMember;
         this.clientEmail = clientEmail;
+        this.id= IdGenerator.generate();
+    }
+    public Reference(){
+        this.id= IdGenerator.generate();
     }
 
-    public Reference() {
-
-    }
-
-    public Long getId() {
+    public String getId() {
         return id;
     }
 

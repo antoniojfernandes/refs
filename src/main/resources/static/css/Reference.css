@@ -1,5 +1,55 @@
 .Client_Info{
     display: table;
-    width: min-content;
+    width: 100%;
+    padding-left: 35%;
+    padding-top: 7%;
+    padding-right: 30%;
+}
+body{
+    width: 100%;
+}
+.navbar-main {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+.form-group {
+    padding:5px;
+    height: 100%;
+    width: 25%;
+    font-size: 20px;
+}
+
+.label-inputs {
+
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+
+
+input[type="text"]{
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.navbar-brand{
+    padding-right:40%;
+}
+.form-control.my-input {
+    width: 100%;
+    height: 40%;
+}
+
+.navbar-link {
+    padding-left: 40%;
+    height: 60px;
+    display: flex;
+    align-items: center;
 }
 
